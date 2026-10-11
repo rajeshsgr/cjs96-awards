@@ -335,7 +335,7 @@ function unlockSite(){
 if(sessionStorage.getItem(GATE_SESSION_KEY)==='yes') unlockSite();
 memberForm.addEventListener('submit',event=>{
   event.preventDefault();
-  const typed = document.getElementById('memberPassword').value;
+  const typed = document.getElementById('memberPassword').value.trim();
   if(typed === REUNION_PASSWORD){unlockSite()}
   else{
     document.getElementById('gateError').textContent='That password does not match. Please try again.';
